@@ -13,4 +13,4 @@ Student Info
 * Name: Nguyen Minh Duc
 * ID: 22BI13091
 * Group ID: 09
-* Project Name: Video streaming platform
+* Project Name: Video Streaming Platform
