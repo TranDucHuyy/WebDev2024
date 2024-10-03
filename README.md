@@ -10,7 +10,7 @@ Students are expected to:
 Student Info
 =======================
 
-* Name: Tran Duc Huy
-* ID: BA12-085
+* Name: Nguyen Minh Duc
+* ID: 22BI13091
 * Group ID: 09
 * Project Name: Video Streaming Platform
