@@ -281,6 +281,7 @@ h1 {
 .ranking {
     width: 90%;
     margin: 0 auto;
+    margin-left: 50px;
 }
 
 .top-anime {
@@ -405,6 +406,7 @@ h1 {
 .anime-info h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: orangered;
 }
 
 .anime-info p {
