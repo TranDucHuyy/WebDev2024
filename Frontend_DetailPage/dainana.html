@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DetailPage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>TRAILER ANIME</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <a href="HomePage.html"><h1 class="logo">TRAILER</h1></a>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active"><a href="/Frontend_HomePage/HomePage.html">HOME</a></li>
+                    <li class="menu-list-item active"><a href="#">ANIME FORM</a></li>
+                    <li class="menu-list-item active"><a href="/FrondEnd_AnimeTop/AnimeTop.html ">TOP ANIME</a></li>
+                    <li class="menu-list-item active"><a href="#">GENRE</a></li>
+                    <li class="menu-list-item active"><a href="#">SEASON</a></li>
+                </ul>
+            </div>
+
+            <!-- Tạm thời ẩn -->
+            <!-- <div class="profile-container">
+                <img class="profile-picture" src="img/prof.jpg" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                    <i class="fa-solid fa-sort-down"></i>
+                </div>
+                <div class="toggle">
+                    <i class="fa-solid fa-moon toggle-icon"></i>
+                    <i class="fa-solid fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <i class="left-menu-icon fa-solid fa-magnifying-glass"></i>
+        <i class="left-menu-icon fa-solid fa-random"></i>
+        <!-- <i class="left-menu-icon fa-solid fa-bookmark"></i> -->
+    </div>
+
+    <!-- Featured Content -->
+    <div class="container">
+        <div class="detail-container">
+            <div class="detail-poster">
+                <img src="img/dainana.jpg" alt="">
+            </div>
+            <button id="popup-button" class="detail-button">
+                <svg viewBox="0 0 24 24">
+                    <path fill="#ffffff" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                </svg>
+                Watch Now
+            </button>
+        
+            <div id="popup-container" class="popup-container">
+                <span class="close-button" onclick="closePopup()">X</span>
+                <div class="video-container">
+                    <iframe id="youtube-iframe" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="detail-title">Tensei shitara Dainana Ouji Datta node, Kimama ni Majutsu wo Kiwamemasu</div>
+            <div class="detail-description">In his past life, Prince Lloyd de Saloum was a commoner who could not become adept at magic, no matter how knowledgeable or obsessed he was about it. Now reincarnated into his current royal lineage, he receives a body with seemingly endless mana, making his desire to master all things arcane attainable. Moreover, as the seventh prince of the kingdom, Lloyd has no claim to the throne, allowing him to nurture his abilities as freely as he wants.
+
+                Unfortunately for Lloyd, ancient seals that imprison powerful demons begin to break down and release the horrors within, endangering the peace. With these monstrosities roaming around, Lloyd's overwhelming magical prowess is the ultimate weapon that can neutralize these threats before all things descend to chaos.
+                </div>
+
+        </div>
+    </div>
+    
+
+    
+    <script src="DetailPage.js"></script>
+    <script>
+        function openPopup(videoId) {
+            var popupContainer = document.getElementById('popup-container');
+            var youtubeIframe = document.getElementById('youtube-iframe');
+
+            youtubeIframe.src = "https://www.youtube.com/embed/" + videoId;
+            popupContainer.classList.add('show');
+        }
+
+        function closePopup() {
+            var popupContainer = document.getElementById('popup-container');
+            var youtubeIframe = document.getElementById('youtube-iframe');
+
+            youtubeIframe.src = "";
+            popupContainer.classList.remove('show');
+        }
+
+        var popupButton = document.getElementById('popup-button');
+        popupButton.addEventListener('click', function() {
+            openPopup("aK8Gtxw-9bE");
+        });
+    </script>
+</body>
+</html>
