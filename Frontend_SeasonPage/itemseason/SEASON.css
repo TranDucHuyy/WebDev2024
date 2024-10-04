@@ -1,0 +1,210 @@
+/* Reset Margin and Padding for All Elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif; /* Updated to Arial */
+    background-color: #2e2e2e; /* Dark gray background */
+    color: rgb(181, 30, 30); /* Red text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    width: 100%;
+    height: 60px; /* Adjust height as needed */
+    background-color: #000; /* Black background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure navbar stays on top */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0; /* Top and bottom padding */
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Optional: limit max width */
+    padding: 0 20px; /* Left and right padding */
+    justify-content: space-between; /* Space between logo and menu */
+}
+
+.logo-container .logo {
+    font-family: "Sen", sans-serif;
+    font-size: 24px;
+    color: red;
+    text-decoration: none;
+}
+
+.menu-container {
+    flex: 1;
+    margin-left: 50px;
+}
+
+.menu-list {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-list-item {
+    position: relative; /* For dropdown positioning */
+}
+
+.menu-list-item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.menu-list-item a:hover {
+    background-color: #111; /* Darker background on hover */
+    border-bottom: 2px solid #C11119; /* Red underline on hover */
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; /* Hidden by default */
+    position: absolute;
+    background-color: #1d1d1d; /* Light gray background */
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px 0;
+    border: none;
+    border-radius: 4px; /* Rounded corners */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show on hover */
+}
+
+.dropdown-content a {
+    color: rgb(255, 255, 255) !important; /* White text */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: none !important; /* Remove any borders */
+}
+
+.dropdown-content a:hover {
+    background-color: #7a090f !important; /* Red background on hover */
+    color: rgb(180, 7, 7) !important; /* Dark red text on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    border-bottom: none !important; /* Remove underline on hover */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 60px; /* Below the navbar */
+    width: 50px;
+    height: calc(100% - 60px); /* Full height minus navbar */
+    background-color: #1e1e1e; /* Dark background */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999; /* Below the navbar */
+}
+
+.left-menu-icon {
+    color: white;
+    font-size: 20px;
+    margin: 20px 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.left-menu-icon:hover {
+    color: red;
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
+/* Main Content Styling */
+.main-content {
+    margin-left: 70px; /* Sidebar width + some margin */
+    padding: 80px 20px 20px 20px; /* Top padding to avoid navbar */
+    text-align: center;
+}
+
+/* Movie List Section */
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Movie Item Styling */
+.movie-item {
+    border: 1px solid #a42727; /* Red border */
+    padding: 10px;
+    background-color: #ac0f0f; /* Dark red background */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px; /* Rounded corners */
+}
+
+.movie-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2); /* Light shadow */
+}
+
+/* Poster Image */
+.movie-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Movie Title */
+.movie-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Movie Description */
+.movie-description {
+    font-size: 0.9rem;
+    color: white !important; /* Ensures white color */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .menu-container {
+        display: none; /* Hide menu on small screens */
+    }
+
+    .sidebar {
+        top: 60px; /* Adjust if needed */
+    }
+
+    .main-content {
+        margin-left: 70px;
+        padding: 80px 10px 10px 10px;
+    }
+}
