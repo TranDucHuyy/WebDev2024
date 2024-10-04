@@ -377,7 +377,7 @@ body{
     position: absolute;
     background-color: #333;
     list-style: none;
-    padding: 10px;
+    padding: 0;
     border-radius: 5px;
     z-index: 1000;
 }
@@ -388,10 +388,21 @@ body{
 
 .dropdown-item {
     font-size: 13px;
-    padding: 10px 10px;
+    padding: 10px 20px;
     box-sizing: border-box;
     transition: background-color 0.3s ease, font-size 0.3s ease;
     width: 100%;
+}
+
+.dropdown-item a {
+    display: block; /* Đảm bảo rằng cả khu vực liên kết bao phủ toàn bộ vùng của item /
+    padding: 10px 20px; / Khoảng cách bên trong của mục /
+    color: white; / Màu chữ mặc định /
+    text-decoration: none; / Bỏ gạch chân /
+}
+
+.dropdown-item a:hover {
+    color: white; / Đảm bảo màu chữ khi hover */
 }
 
 .dropdown-item:hover {
