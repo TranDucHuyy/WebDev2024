@@ -387,8 +387,8 @@ body{
 }
 
 .dropdown-item {
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 13px;
+    padding: 10px 10px;
     box-sizing: border-box;
     transition: background-color 0.3s ease, font-size 0.3s ease;
     width: 100%;
@@ -396,7 +396,7 @@ body{
 
 .dropdown-item:hover {
     background-color: red;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     color: white;
     transition: background-color 0.3s ease, font-size 0.3s ease;
