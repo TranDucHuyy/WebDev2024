@@ -1,16 +1,12 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Đảm bảo tất cả phần tử sử dụng box-sizing */
+*{
+    margin:0;
 }
 
-body {
+body{
     font-family: "Roboto", sans-serif;
-    background-color: #151515; /* Màu nền tổng thể cho body */
-    color: white; /* Màu chữ mặc định */
 }
 
-.navbar {
+.navbar{
     width: 100%;
     height: 50px;
     background-color: black;
@@ -19,7 +15,7 @@ body {
     z-index: 999; /* Đảm bảo thanh điều hướng nằm trên các phần tử khác */
 }
 
-.navbar-container {
+.navbar-container{
     display: flex;
     align-items: center;
     padding: 0 50px;
@@ -28,49 +24,69 @@ body {
     font-family: "Sen", sans-serif;
 }
 
-.logo-container a {
+.logo-container a{
     flex: 1;
     text-decoration: none;
 }
 
-.logo {
+.logo{
     font-family: "Sen", sans-serif;
-    font-size: 30px;
+    font: 30px;
     color: red;
 }
 
-.menu-container {
+.menu-container a{
     flex: 6;
+    text-decoration: none;
+    color: inherit;
 }
 
-.menu-list {
+.menu-list{
     display: flex;
     list-style: none;
 }
 
-.menu-list-item {
-    margin-right: 30px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+.light-mode .menu-container a{
+    flex: 6;
+    text-decoration: none;
+    color: black;
 }
 
+.menu-list-item {
+    margin-right: 30px;
+    padding: 10px 20px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+/* Hover effect cho dark mode */
 .menu-list-item:hover {
-    background-color: rgba(255, 0, 0, 0.877);
+    background-color: rgba(255, 0, 0, 0.877); 
+    border-radius: 5px; 
+}
+
+/* Hover effect cho light mode */
+.light-mode .menu-list-item:hover {
+    background-color: rgba(255, 0, 0, 0.877); 
+    color: black; 
     border-radius: 5px;
 }
 
-.menu-list-item.active {
+.menu-list-item.active{
     font-weight: bold;
 }
 
-.profile-container {
-    flex: 2;
+.profile-container{
+    flex: 2 ;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 }
 
-.profile-picture {
+.profile-text-container{
+    margin: 0 20px
+}
+
+.profile-picture{
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -82,11 +98,11 @@ body {
     height: 20px;
     background-color: white;
     border-radius: 30px;
-    display: flex;
+    display:flex;
     align-items: center;
     justify-content: space-around;
     position: relative;
-    cursor: pointer;
+    cursor: pointer; 
     transition: background-color 0.3s ease;
 }
 
@@ -113,7 +129,7 @@ body {
     transform: translateX(-20px);
 }
 
-.sidebar {
+.sidebar{
     width: 50px;
     height: 100%;
     background-color: black;
@@ -125,22 +141,59 @@ body {
     padding-top: 60px;
 }
 
-.left-menu-icon {
+.sidebar.active{
+    background-color: white;
+}
+
+.left-menu-icon{
     color: white;
     font-size: 20px;
     margin-bottom: 40px;
+    transition: transform 0.7s ease-in-out;
+}
+
+.left-menu-icon:hover{
+    color:red;
+    transform: rotate(360deg);
 }
 
 .container {
     background-color: #151515;
-    min-height: calc(100vh - 50px); /* Chiều cao tối thiểu cho container */
-    width: 100%;
-    overflow-y: auto; /*thanh cuộn*/
+    min-height: 100vh;
+    padding-left: 50px; /* Bù không gian cho sidebar */
+    width: calc(100% - 50px); /* Trừ chiều rộng của sidebar khỏi chiều rộng tổng */
+    color: white;
+    overflow-y: auto; /* Thanh cuộn dọc */
+    padding-bottom: 0; /* Loại bỏ khoảng cách dưới */
 }
 
-.content-container {
-    margin-left: 50px; /* Đảm bảo nội dung không bị che bởi sidebar */
-    padding-top: 70px; /* Khoảng cách trên cho nội dung tránh navbar */
+.title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.container.active{
+    background-color: white;
+}
+
+.navbar-container.active{
+    background-color: white;
+    color: black;
+}
+
+.left-menu-icon.active{
+    color: black;
+}
+
+
+.container {
+    background-color: #151515;
+    min-height: 100vh; /* Đảm bảo container chiếm toàn bộ chiều cao màn hình */
+    width: 100%;
+    overflow-y: auto; /* Thanh cuộn dọc */
+    padding-bottom: 0; /* Loại bỏ khoảng cách dưới cùng */
 }
 
 /* Định dạng cho dropdown menu */
@@ -181,36 +234,21 @@ body {
     text-align: center;
 }
 
-/* Breadcrumb */
-.breadcrumb {
-    margin: 70px 0 20px; /* Đảm bảo có khoảng cách với navbar */
-    font-size: 16px;
-    background-color: rgba(255, 255, 255, 0.1); /* Nền nhẹ nhàng cho breadcrumb */
-    padding: 10px; /* Padding để tạo không gian bên trong */
-    border-radius: 5px; /* Bo tròn các góc */
-    color: white; /* Đặt màu chữ */
-}
-
-.breadcrumb a {
-    color: white; /* Màu chữ cho liên kết */
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline; /* Gạch chân khi hover */
-}
-
-.breadcrumb span {
-    color: lightgray; /* Màu cho phần không phải liên kết */
-}
-
 /* Style cho danh sách anime */
 .anime-list {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 cột */
     grid-gap: 20px; /* Khoảng cách giữa các mục */
-    justify-items: center; /* Canh giữa các mục */
-    margin: 20px 0; /* Khoảng cách trên và dưới */
+    justify-content: center; /* Canh giữa các mục */
+    margin: 20px auto; /* Khoảng cách trên và dưới */
+    width: 90%;
+}
+
+.content-container {
+    margin: 0 auto; /* Căn giữa toàn bộ nội dung */
+    padding-top: 70px; /* Khoảng cách trên để tránh navbar */
+    width: 90%; /* Đảm bảo chiều rộng container không bị quá lớn */
+    max-width: 1200px; /* Đặt chiều rộng tối đa để tránh quá lớn */
 }
 
 .anime-item {
@@ -218,15 +256,29 @@ body {
 }
 
 .anime-item img {
-    width: 150px;
-    height: 200px;
+    width: 300px;
+    height: 400px;
     object-fit: cover; 
+    transition: transform 0.3s ease;
+}
+
+.anime-item img:hover {
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+.anime-item p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+    text-align: center;
 }
 
 .pagination {
     display: flex;
     justify-content: center; /* Căn giữa cho các liên kết phân trang */
+    align-items: center; /* Căn giữa theo trục dọc */
     margin-top: 20px;
+    padding-bottom: 20px; /* Thêm khoảng cách nhỏ phía dưới */
 }
 
 .page-link {
