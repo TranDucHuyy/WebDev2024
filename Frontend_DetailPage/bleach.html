@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DetailPage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>TRAILER ANIME</title>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <a href="HomePage.html"><h1 class="logo">TRAILER</h1></a>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active"><a href="/Frontend_HomePage/HomePage.html">HOME</a></li>
+                    <li class="menu-list-item active"><a href="#">ANIME FORM</a></li>
+                    <li class="menu-list-item active"><a href="/FrondEnd_AnimeTop/AnimeTop.html ">TOP ANIME</a></li>
+                    <li class="menu-list-item active"><a href="#">GENRE</a></li>
+                    <li class="menu-list-item active"><a href="#">SEASON</a></li>
+                </ul>
+            </div>
+
+            <!-- Tạm thời ẩn -->
+            <!-- <div class="profile-container">
+                <img class="profile-picture" src="img/prof.jpg" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                    <i class="fa-solid fa-sort-down"></i>
+                </div>
+                <div class="toggle">
+                    <i class="fa-solid fa-moon toggle-icon"></i>
+                    <i class="fa-solid fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <i class="left-menu-icon fa-solid fa-magnifying-glass"></i>
+        <i class="left-menu-icon fa-solid fa-random"></i>
+        <!-- <i class="left-menu-icon fa-solid fa-bookmark"></i> -->
+    </div>
+
+    <!-- Featured Content -->
+    <div class="container">
+        <div class="detail-container">
+            <div class="detail-poster">
+                <img src="img/bleach.jpg" alt="">
+            </div>
+            <button id="popup-button" class="detail-button">
+                <svg viewBox="0 0 24 24">
+                    <path fill="#ffffff" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                </svg>
+                Watch Now
+            </button>
+        
+            <div id="popup-container" class="popup-container">
+                <span class="close-button" onclick="closePopup()">X</span>
+                <div class="video-container">
+                    <iframe id="youtube-iframe" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="detail-title">Bleach: Sennen Kessen-hen - Ketsubetsu-tan</div>
+            <div class="detail-description">After a brutal surprise attack by the forces of Quincy King Yhwach, the resident Reapers of the Soul Society lick their wounds and mourn their losses. Many of the surviving Soul Reaper captains train to battle without their Bankai, the ultimate technique wielded by the fiercest warriors.
+
+                In the previous assault, Ichigo Kurosaki narrowly managed to help fend off Yhwach's fearsome wrath. However, to ultimately defeat his godly adversary and save his allies, Ichigo must now undergo severe training that will push him beyond his physical, emotional, and mental limits.
+                
+                Though Yhwach already holds the upper hand in this ongoing blood feud, he also successfully recruits Uryuu Ishida, Ichigo's close friend and rival, to be his successor. Yhwach strikes out once again at the weakened Soul Society, intent on finally obliterating his long-standing enemies. As Ichigo struggles to attain new power, the Soul Reaper captains fight for survival and borrowed time.</div>
+
+        </div>
+    </div>
+    
+
+    
+    <script src="DetailPage.js"></script>
+    <script>
+        function openPopup(videoId) {
+            var popupContainer = document.getElementById('popup-container');
+            var youtubeIframe = document.getElementById('youtube-iframe');
+
+            youtubeIframe.src = "https://www.youtube.com/embed/" + videoId;
+            popupContainer.classList.add('show');
+        }
+
+        function closePopup() {
+            var popupContainer = document.getElementById('popup-container');
+            var youtubeIframe = document.getElementById('youtube-iframe');
+
+            youtubeIframe.src = "";
+            popupContainer.classList.remove('show');
+        }
+
+        var popupButton = document.getElementById('popup-button');
+        popupButton.addEventListener('click', function() {
+            openPopup("SCsVvJR9iWM  ");
+        });
+    </script>
+</body>
+</html>
