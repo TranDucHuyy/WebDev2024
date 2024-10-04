@@ -32,7 +32,7 @@ body{
 .logo{
     font-family: "Sen", sans-serif;
     font: 30px;
-    color: red
+    color: red;
 }
 
 .menu-container a{
@@ -160,7 +160,7 @@ body{
 .container{
     background-color: #151515;
     min-height: calc(100vh - 50px);
-    width: 100%;
+    width: 100%;        
     color: white;
 }
 
