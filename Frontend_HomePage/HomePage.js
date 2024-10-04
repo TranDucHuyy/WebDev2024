@@ -20,21 +20,21 @@ window.addEventListener('load', () => {
     }
 });
 
-// Xử lý chuyển đổi chế độ sáng/tối và lưu trạng thái vào localStorage
-toggle.addEventListener('click', () => {
-    toggleBall.forEach(color_mode => {
-        color_mode.classList.toggle('active'); // Thay đổi chế độ sáng/tối bằng cách toggle class 'active'
-    });
+// // Xử lý chuyển đổi chế độ sáng/tối và lưu trạng thái vào localStorage
+// toggle.addEventListener('click', () => {
+//     toggleBall.forEach(color_mode => {
+//         color_mode.classList.toggle('active'); // Thay đổi chế độ sáng/tối bằng cách toggle class 'active'
+//     });
 
-    toggle.classList.toggle('active'); // Thay đổi màu của toggle
+//     toggle.classList.toggle('active'); // Thay đổi màu của toggle
 
-    // Lưu trạng thái vào localStorage
-    if (toggle.classList.contains('active')) {
-        localStorage.setItem('mode', 'dark-mode');
-    } else {
-        localStorage.setItem('mode', 'light-mode');
-    }
-});
+//     // Lưu trạng thái vào localStorage
+//     if (toggle.classList.contains('active')) {
+//         localStorage.setItem('mode', 'dark-mode');
+//     } else {
+//         localStorage.setItem('mode', 'light-mode');
+//     }
+// });
 
 // Lặp qua từng movie list
 movieLists.forEach((movieList, i) => {
