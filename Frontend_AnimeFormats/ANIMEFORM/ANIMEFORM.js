@@ -1,37 +1,13 @@
-const arrowsLeft = document.querySelectorAll(".arrow-left");
-const arrowsRight = document.querySelectorAll(".arrow-right");
-const movieLists = document.querySelectorAll(".movie-list");
-const toggle = document.querySelector('.toggle');
-const toggleBall = document.querySelectorAll('.container, .movie-list-title, .sidebar, .navbar-container, .left-menu-icon, .toggle-ball');
+   // Lấy số trang hiện tại từ thuộc tính data-current-page
+   const paginationDiv = document.querySelector('.pagination');
+   const currentPage = paginationDiv.getAttribute('current-page');
 
-// Kiểm tra trạng thái được lưu trong localStorage khi tải lại trang
-window.addEventListener('load', () => {
-    const mode = localStorage.getItem('mode');
-    if (mode === 'dark-mode') {
-        toggleBall.forEach(color_mode => {
-            color_mode.classList.add('active');
-        });
-        toggle.classList.add('active');
-    } else {
-        toggleBall.forEach(color_mode => {
-            color_mode.classList.remove('active');
-        });
-        toggle.classList.remove('active');
-    }
-});
+   // Tìm tất cả các phần tử a với class "page-link"
+   const pageLinks = document.querySelectorAll('.page-link');
 
-// Xử lý chuyển đổi chế độ sáng/tối và lưu trạng thái vào localStorage
-toggle.addEventListener('click', () => {
-    toggleBall.forEach(color_mode => {
-        color_mode.classList.toggle('active'); // Thay đổi chế độ sáng/tối bằng cách toggle class 'active'
-    });
-
-    toggle.classList.toggle('active'); // Thay đổi màu của toggle
-
-    // Lưu trạng thái vào localStorage
-    if (toggle.classList.contains('active')) {
-        localStorage.setItem('mode', 'dark-mode');
-    } else {
-        localStorage.setItem('mode', 'light-mode');
-    }
+   // Lặp qua từng liên kết và so sánh với số trang hiện tại
+   pageLinks.forEach(link => {
+       if (link.textContent === currentPage) {
+           link.classList.add('active');
+       }
 });
