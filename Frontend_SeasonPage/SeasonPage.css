@@ -1,9 +1,16 @@
 *{
-    margin:0;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    box-sizing: border-box;
 }
 
 body{
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif; /* Updated to Arial */
+    background-color: #2e2e2e; /* Dark gray background */
+    color: rgb(255, 255, 255); /* Red text color */
+    margin: 0;
+    padding: 0;
 }
 
 .navbar{
@@ -52,10 +59,20 @@ body{
     transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
+.menu-list-item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border-bottom 0.3s ease;
+}
 /* Hover effect cho dark mode */
+
 .menu-list-item:hover {
     background-color: rgba(255, 0, 0, 0.877); 
-    border-radius: 5px; 
+    border-radius: 4px; 
 }
 
 
@@ -81,75 +98,51 @@ body{
     object-fit: cover;
 }
 
-.toggle {
-    width: 40px;
-    height: 20px;
-    background-color: white;
-    border-radius: 30px;
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
-    cursor: pointer; 
-    transition: background-color 0.3s ease;
-}
-
-.toggle-icon {
-    color: goldenrod;
-}
-
-.toggle-ball {
-    width: 18px;
-    height: 18px;
-    background-color: black;
-    position: absolute;
-    right: 1px;
-    border-radius: 50%;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.toggle.active {
-    background-color: black;
-}
-
-.toggle-ball.active {
-    background-color: white;
-    transform: translateX(-20px);
-}
 
 /* Dropdown menu styling */
-.dropdown-content {
+.dropdown {
+    position: relative;
+    display: inline-block;
+}   
+
+.dropdown-menu {
+    width: 150px;
     display: none;
     position: absolute;
-    top: 100%; /* Align dropdown directly under the SEASON item */
-    left: 120; /* Align to the left of the parent item */
-    background-color: #000000;
-    min-width: 150px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #333;
+    list-style: none;
+    padding: 0;
+    border-radius: 5px;
     z-index: 1000;
-    margin-top: 0;
-    transition: all 0.3s ease; /* Ensure no gap */
-    list-style-type: none;
 }
 
-.dropdown-content li {
-    padding: 10px;
-    text-align: left;
+.menu-list-item:hover .dropdown-menu {
+    display: block;
+    left: 0;
+}
+
+.dropdown-item {
+    font-size: 15px;
+    left: 0;
+    padding: 0px 0px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-item a {
+    display: block;
+    left: 0;
+}
+
+.dropdown-item:hover {
+    background-color: red;
+    font-size: 15px;
+    font-weight: bold;
     color: white;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
 }
-
-.dropdown-content li a {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    pointer-events: auto;
-}
-
-.dropdown-content li a:hover {
-    background-color: #000000;
-    color: rgb(243, 0, 0);
-}
-
 /* Add this CSS to show the dropdown on hover */
 .menu-list-item:hover .dropdown-content {
     display: block;
@@ -208,5 +201,3 @@ body{
 .left-menu-icon.active{
     color: black;
 }
-
-
