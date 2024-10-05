@@ -444,3 +444,48 @@ h1 {
     opacity: 1; /* Luôn hiển thị khi đã bookmark */
     color: red; 
 }
+
+/*=================Dropdown của Tuấn====================*/
+.dropdown-menu {
+    width: 150px;
+    display: none;
+    position: absolute;
+    background-color: #333;
+    list-style: none;
+    padding: 0;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.menu-list-item:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    font-size: 13px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+    width: 100%;
+}
+
+.dropdown-item a {
+    display: block; /* Đảm bảo rằng cả khu vực liên kết bao phủ toàn bộ vùng của item /
+    padding: 10px 20px; / Khoảng cách bên trong của mục /
+    color: white; / Màu chữ mặc định /
+    text-decoration: none; / Bỏ gạch chân /
+}
+
+.dropdown-item a:hover {
+    color: white; / Đảm bảo màu chữ khi hover */
+}
+
+.dropdown-item:hover {
+    background-color: red;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+}
+
+/*========================Dropdown========================*/
