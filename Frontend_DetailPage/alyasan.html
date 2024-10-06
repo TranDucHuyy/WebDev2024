@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -5,7 +6,7 @@
     <link rel="stylesheet" href="DetailPage.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <title>TRAILER</title>
+    <title>TRAILER ANIME</title>
 </head>
 <body>
 
@@ -13,17 +14,20 @@
     <div class="navbar">
         <div class="navbar-container">
             <div class="logo-container">
-                <a href="DetailPage.html"><h1 class="logo">TRAILER</h1></a></div>
+                <a href="HomePage.html"><h1 class="logo">TRAILER</h1></a>
+            </div>
             <div class="menu-container">
                 <ul class="menu-list">
-                    <li class="menu-list-item active">HOME</li>
-                    <li class="menu-list-item active">ANIME FORM</li>
-                    <li class="menu-list-item active">TOP ANIME</li>
-                    <li class="menu-list-item active">GENRE</li>
-                    <li class="menu-list-item active">SEASON</li>
+                    <li class="menu-list-item active"><a href="/Frontend_HomePage/HomePage.html">HOME</a></li>
+                    <li class="menu-list-item active"><a href="#">ANIME FORM</a></li>
+                    <li class="menu-list-item active"><a href="/FrondEnd_AnimeTop/AnimeTop.html ">TOP ANIME</a></li>
+                    <li class="menu-list-item active"><a href="#">GENRE</a></li>
+                    <li class="menu-list-item active"><a href="#">SEASON</a></li>
                 </ul>
             </div>
-            <div class="profile-container">
+
+            <!-- Tạm thời ẩn -->
+            <!-- <div class="profile-container">
                 <img class="profile-picture" src="img/prof.jpg" alt="">
                 <div class="profile-text-container">
                     <span class="profile-text">Profile</span>
@@ -34,7 +38,7 @@
                     <i class="fa-solid fa-sun toggle-icon"></i>
                     <div class="toggle-ball"></div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -42,34 +46,90 @@
     <div class="sidebar">
         <i class="left-menu-icon fa-solid fa-magnifying-glass"></i>
         <i class="left-menu-icon fa-solid fa-random"></i>
-        <i class="left-menu-icon fa-solid fa-bookmark"></i>
+        <!-- <i class="left-menu-icon fa-solid fa-bookmark"></i> -->
     </div>
 
-    <!-- Featured content -->   
+    <!-- Featured Content -->
     <div class="container">
         <div class="detail-container">
-            <div class="detail-poster">
-                <img src="img/alyasan.jpg" alt="">
-            </div>
-            <button class="detail-button">Watch</button>
-
-            <div class="detail-title">Shangri-La Frontier: Kusoge Hunter, Kamige ni Idoman to su</div>
-            <div class="detail-description">Seirei Academy is a prestigious school attended by the very best students in Japan. Alisa Mikhailovna "Alya" Kujou, the half-Russian and half-Japanese treasurer of the school's student council, is known for her intelligence, stunning looks, and rigid personality. Contrasting her near-flawless persona, Alya's unmotivated classmate Masachika Kuze slacks off during lessons and seems to show no interest in her.
-
-                Initially irritated, Alya gradually becomes more intrigued by Masachika and starts expressing her affection for him in Russian. However, she is oblivious to his secret—he understands the language fluently! Due to a childhood friend who was temporarily staying in Japan, Masachika has been studying Russian in hopes of reuniting with her.
-                
-                As the two spend more time together, the playful and eccentric relationship between them quickly deepens. In the meantime, both must learn to navigate their new growing feelings for one another.
+            <div class="movie-details">
+                <div class="detail-title">Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san</div>
+                <div class="detail-rating">RATING</div>
+                <div class="detail-description">
+                    Seirei Academy is a prestigious school attended by the very best students in Japan. Alisa Mikhailovna "Alya" Kujou, the half-Russian and half-Japanese treasurer of the school's student council, is known for her intelligence, stunning looks, and rigid personality. Contrasting her near-flawless persona, Alya's unmotivated classmate Masachika Kuze slacks off during lessons and seems to show no interest in her.
+                    Initially irritated, Alya gradually becomes more intrigued by Masachika and starts expressing her affection for him in Russian. However, she is oblivious to his secret—he understands the language fluently! Due to a childhood friend who was temporarily staying in Japan, Masachika has been studying Russian in hopes of reuniting with her.
+                    As the two spend more time together, the playful and eccentric relationship between them quickly deepens. In the meantime, both must learn to navigate their new growing feelings for one another.
                 </div>
-
-        </div>           
-    </div>
-
-    <div class="youtube-player-overlay">
-        <div class="youtube-player-popup">
-            <iframe width="1276" height="718" src="https://www.youtube.com/embed/ZBOXufdpin0" title="Tokidoki Bosotto Russia-go de Dereru Tonari no Alya-san | Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                
+                <!-- Horizontal alignment of Genre, Director, and Producer -->
+                <div class="detail-horizontal">
+                    <div class="detail-rank">
+                        <strong>RANK:</strong><br>
+                        1284
+                    </div>
+                    <div class="detail-popularity">
+                        <strong>POPULARITY:</strong><br>
+                        767
+                    </div>
+                    <div class="detail-member">
+                        <strong>MEMBER:</strong><br>
+                        326,171
+                    </div>
+                </div>
+    
+                <div class="list-buttons">
+                    <button class="detail-button" id="popup-button">
+                        <img class="detail-button-icon" src="img/playbutton.png" alt="Play">
+                        Play
+                    </button>
+                </div>
+            </div>
+            <div class="movie-poster">
+                <img src="img/alyasan.jpg" alt="Avengers Poster">
+            </div>
         </div>
+
+            <!-- <button id="popup-button" class="detail-button">
+                <svg viewBox="0 0 24 24">
+                    <path fill="#ffffff" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+                </svg>
+                Watch Now
+            </button>-->
+        
+            <div id="popup-container" class="popup-container">
+                <span class="close-button" onclick="closePopup()">X</span>
+                <div class="video-container">
+                    <iframe id="youtube-iframe" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            
     </div>
     
+
+    
     <script src="DetailPage.js"></script>
+    <script>
+        function openPopup(videoId) {
+            var popupContainer = document.getElementById('popup-container');
+            var youtubeIframe = document.getElementById('youtube-iframe');
+
+            youtubeIframe.src = "https://www.youtube.com/embed/" + videoId;
+            popupContainer.classList.add('show');
+        }
+
+        function closePopup() {
+            var popupContainer = document.getElementById('popup-container');
+            var youtubeIframe = document.getElementById('youtube-iframe');
+
+            youtubeIframe.src = "";
+            popupContainer.classList.remove('show');
+        }
+
+        var popupButton = document.getElementById('popup-button');
+        popupButton.addEventListener('click', function() {
+            openPopup("pBX6TtOlYow");
+        });
+    </script>
 </body>
 </html>
