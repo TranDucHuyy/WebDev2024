@@ -249,7 +249,7 @@ body {
 
 /* Active state for dropdown */
 .menu-list-item.active .dropdown-item a {
-    color: lightgray;
+    color: white;
 }
 
 .page-link.active {
