@@ -318,17 +318,6 @@ h1 {
     color: white;
 }
 
-.top-anime:hover .movie-desc{
-    opacity: 3; 
-    transition: opacity 0.5s ease-in-out;
-    white-space: normal; /* Allow wrapping to multiple lines */
-    -webkit-line-clamp: 6; /* Show up to 6 lines */
-    display: -webkit-box; /* Enable clamping for multiple lines */
-    -webkit-box-orient: vertical;
-    overflow: hidden; /* Ensure text beyond the 6th line is hidden */
-    height: auto; /* Adjust height to fit the full text */
-}
-
 .top-anime.first-rank{
     background-size: cover;
     padding: 40px;
@@ -377,25 +366,6 @@ h1 {
     margin-right: 20px;
     width: 60px;
     text-align: center;
-}
-
-.movie-desc{
-    background-color: #333;
-    padding: 2px 10px; 
-    font-size: 14px;
-    top: 30%; 
-    left: 50px; 
-    right: 50px; 
-    width: auto; 
-    opacity: 1;
-    transition: 100ms all ease-in-out;
-    box-sizing: border-box;
-    white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis;
-    display: -webkit-box; 
-    -webkit-line-clamp: 1; 
-    -webkit-box-orient: vertical; 
 }
 
 .movie-button{
