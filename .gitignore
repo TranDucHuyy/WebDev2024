@@ -1,0 +1,9 @@
+# VSCode settings
+.vscode/
+
+# JetBrains IDEs (WebStorm, IntelliJ, PyCharm)
+.idea/
+
+# Windows
+Thumbs.db
+desktop.ini
