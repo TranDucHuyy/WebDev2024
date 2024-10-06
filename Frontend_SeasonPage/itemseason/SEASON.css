@@ -1,22 +1,24 @@
-/* Reset Margin and Padding for All Elements */
-* {
-    margin: 0;
-    padding: 0;
-    left: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
 }
 
-/* Body Styling */
-body {
-    font-family: "Roboto", sans-serif; /* Updated to Arial */
-    background-color: #2e2e2e; /* Dark gray background */
-    color: rgb(255, 255, 255); /* Red text color */
+body{
+    font-family: "Roboto", sans-serif;
+    background-color: #20232a; /* Change this to your desired background color */
+    font-family: 'Roboto', sans-serif; /* Ensure consistency with your font */
     margin: 0;
     padding: 0;
+    color: #ffffff; /* Optional: Change text color to improve readability */
 }
 
-/* Navbar Styles */
-.navbar {
+.bodypart{
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #fffafa;
+    color: #3b3939;
+}
+
+.navbar{
     width: 100%;
     height: 50px;
     background-color: black;
@@ -25,7 +27,7 @@ body {
     z-index: 999; /* Đảm bảo thanh điều hướng nằm trên các phần tử khác */
 }
 
-.navbar-container {
+.navbar-container{
     display: flex;
     align-items: center;
     padding: 0 50px;
@@ -34,16 +36,19 @@ body {
     font-family: "Sen", sans-serif;
 }
 
-.logo-container .logo {
+.logo-container a{
     flex: 1;
-    font-family: "Sen", sans-serif;
-    font-size: 16px;
-    color: red;
     text-decoration: none;
 }
 
+.logo{
+    font-family: "Sen", sans-serif;
+    font: 30px;
+    color: red;
+}
+
 .menu-container a{
-    flex: 1;
+    flex: 6;
     text-decoration: none;
     color: inherit;
 }
@@ -65,27 +70,149 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-.menu-list-item a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 5px 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease, border-bottom 0.3s ease;
+/* Hover effect cho dark mode */
+.menu-list-item:hover {
+    background-color: rgba(255, 0, 0, 0.877); 
+    border-radius: 5px; 
 }
 
-.menu-list-item a:hover {
+/* Hover effect cho light mode */
+.light-mode .menu-list-item:hover {
     background-color: rgba(255, 0, 0, 0.877); 
-    border-radius: 4px; 
+    color: black; 
+    border-radius: 5px;
+}
+
+.menu-list-item.active{
+    font-weight: bold;
+}
+
+.profile-container{
+    flex: 2 ;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-text-container{
+    margin: 0 20px
+}
+
+.profile-picture{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.toggle {
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+
+.toggle-icon {
+    color: goldenrod;
+}
+
+.toggle-ball {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.toggle.active {
+    background-color: black;
+}
+
+.toggle-ball.active {
+    background-color: white;
+    transform: translateX(-20px);
+}
+
+.sidebar{
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.sidebar.active{
+    background-color: white;
+}
+
+.left-menu-icon{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 40px;
+    transition: transform 0.7s ease-in-out;
+}
+
+.left-menu-icon:hover{
+    color:red;
+    transform: rotate(360deg);
+}
+
+.container{
+    background-color: #303030;
+    min-height: calc(100vh - 50px);
+    width: 100%;        
+    color: white;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px; /* Optional: Adjust padding */
+}
+
+.content-container{
+    margin-left: 0%;
+    width: 100%;
+    display: flex;
+}
+
+.container.active{
+    background-color: white;
+}
+
+.navbar-container.active{
+    background-color: white;
+    color: black;
+}
+
+.left-menu-icon.active{
+    color: black;
+}
+
+/* Light mode adjustments */
+.light-mode .navbar {
+    background-color: white;
+}
+
+.light-mode .navbar-container {
+    color: black;
+}
+
+.light-mode .toggle-ball {
+    background-color: black;
 }
 
 /* Dropdown Styles */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
 .dropdown-menu {
     width: 150px;
     display: none;
@@ -99,22 +226,25 @@ body {
 
 .menu-list-item:hover .dropdown-menu {
     display: block;
-    left: 0;
 }
 
 .dropdown-item {
     font-size: 13px;
-    left: 0;
-    padding: 0px 0px;
+    padding: 10px 20px;
     box-sizing: border-box;
     transition: background-color 0.3s ease, font-size 0.3s ease;
     width: 100%;
-    text-align: center;
 }
 
 .dropdown-item a {
-    display: block;
-    left: 0;
+    display: block; /* Đảm bảo rằng cả khu vực liên kết bao phủ toàn bộ vùng của item /
+    padding: 10px 20px; / Khoảng cách bên trong của mục /
+    color: white; / Màu chữ mặc định /
+    text-decoration: none; / Bỏ gạch chân /
+}
+
+.dropdown-item a:hover {
+    color: white; / Đảm bảo màu chữ khi hover */
 }
 
 .dropdown-item:hover {
@@ -124,6 +254,9 @@ body {
     color: white;
     transition: background-color 0.3s ease, font-size 0.3s ease;
 }
+
+/*========================Dropdown========================*/
+
 /* Sidebar Styles */
 .sidebar {
     width: 50px;
@@ -152,9 +285,11 @@ body {
 
 /* Main Content Styling */
 .main-content {
-    margin-left: 70px; /* Sidebar width + some margin */
-    padding: 80px 20px 20px 20px; /* Top padding to avoid navbar */
+    margin-left: 0; /* Sidebar width + some margin */
+    padding: 50px 0px 0px 0px; /* Top padding to avoid navbar */
     text-align: center;
+    margin-right: 0;
+  
 }
 
 /* Movie List Section */
@@ -163,6 +298,9 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap; /* This will wrap the items to the next row if there's not enough space */
+    justify-content: space-between; /* Adjusts the space between items */
 }
 
 /* Movie Item Styling */
@@ -182,7 +320,6 @@ body {
 
 /* Poster Image */
 .movie-item img {
-    width: 100%;
     height: auto;
     border-radius: 8px;
 }
@@ -207,12 +344,111 @@ body {
         display: none; /* Hide menu on small screens */
     }
 
-    .sidebar {
-        top: 60px; /* Adjust if needed */
-    }
-
     .main-content {
         margin-left: 70px;
         padding: 80px 10px 10px 10px;
     }
 }
+
+.container{
+    background-color: #151515;
+    min-height: calc(100vh - 50px);
+    width: 100%;        
+    color: white;
+}
+
+.content-container{
+    margin-left: 50px;
+}
+
+.container.active{
+    background-color: white;
+}
+
+.navbar-container.active{
+    background-color: white;
+    color: black;
+}
+
+.left-menu-icon.active{
+    color: black;
+}
+
+/* Main Content Styles */
+
+.main-content {
+    margin-left: 50px;
+    padding: 80px 20px 20px 20px;
+    text-align: center;
+}
+
+.season-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center; /* This centers the heading */
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #ff6347;
+}
+
+/* Anime Season List */
+    .anime-season-container {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(400px, 1fr)); /* Increase minimum size to 300px */
+        grid-template-rows: repeat(3,1fr);
+        gap: 15px;
+        padding: 10px;
+        max-width: 1200px;
+        margin: 10px;
+    }
+    
+
+
+
+.anime-card {
+    background-color: #c02121;
+    border-radius: 20px;
+    box-shadow: 0 20px 160px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.7s;
+    left: 2;
+    width: 200;
+    height: 100;
+}
+
+.anime-card:hover {
+    transform: scale(1.07);
+}
+
+.anime-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.anime-card a {
+    color: #81f7d2; /* Match the card theme or any desired color */
+    text-decoration: none; /* Remove underline */
+}
+
+.anime-card a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.anime-details {
+    padding: 15px;
+}
+
+.anime-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 0 0 10px;
+}
+
+.anime-description {
+    font-size: 1rem;
+    color: #d8d8d8
+}
+
+
