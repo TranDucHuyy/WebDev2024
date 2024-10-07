@@ -290,15 +290,19 @@ body{
     color: #ff6347;
 }
 
+
+
+
 /* Anime Season List */
 .anime-season-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Các cột linh hoạt với kích thước tối thiểu */
+    grid-template-columns: repeat(4, 1fr); /* 4 cột có kích thước bằng nhau */
     gap: 30px; /* Khoảng cách giữa các cột */
-    justify-content: center; /* Căn giữa toàn bộ các cột */
-    width: 100%; /* Đảm bảo độ rộng container */
-    margin: 0 auto; /* Căn giữa container */
-    padding: 20px; /* Khoảng cách bên trong của container */
+    justify-content: center; /* Căn giữa các cột */
+    width: 90%; /* Đảm bảo độ rộng container không chiếm toàn bộ trang */
+    margin: 20px auto; /* Căn giữa container trong trang */
+    margin-left: 20px;
+    padding: 10px; /* Khoảng cách bên trong của container */
 }
 
 /* Anime Card */
