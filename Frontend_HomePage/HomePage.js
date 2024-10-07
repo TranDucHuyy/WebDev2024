@@ -2,7 +2,7 @@ const arrowsLeft = document.querySelectorAll(".arrow-left");
 const arrowsRight = document.querySelectorAll(".arrow-right");
 const movieLists = document.querySelectorAll(".movie-list");
 const toggle = document.querySelector('.toggle');
-const toggleBall = document.querySelectorAll('.container, .movie-list-title, .sidebar, .navbar-container, .left-menu-icon, .toggle-ball');
+const toggleBall = document.querySelectorAll('.container, .movie-list-title, .sibar, .navbar-container, .left-menu-icon, .toggle-ball');
 
 // Kiểm tra trạng thái được lưu trong localStorage khi tải lại trang
 window.addEventListener('load', () => {
