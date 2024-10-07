@@ -153,7 +153,7 @@ body {
 
 .title {
     text-align: center;
-    font-size: 28px;
+    font-size: 15px;
     margin-bottom: 20px;
     color: white;
 }
@@ -249,7 +249,7 @@ body {
 
 /* Active state for dropdown */
 .menu-list-item.active .dropdown-item a {
-    color: lightgray;
+    color: white;
 }
 
 .page-link.active {
