@@ -70,77 +70,6 @@ body{
     transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-/* Hover effect cho dark mode */
-.menu-list-item:hover {
-    background-color: rgba(255, 0, 0, 0.877); 
-    border-radius: 5px; 
-}
-
-/* Hover effect cho light mode */
-.light-mode .menu-list-item:hover {
-    background-color: rgba(255, 0, 0, 0.877); 
-    color: black; 
-    border-radius: 5px;
-}
-
-.menu-list-item.active{
-    font-weight: bold;
-}
-
-.profile-container{
-    flex: 2 ;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.profile-text-container{
-    margin: 0 20px
-}
-
-.profile-picture{
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.toggle {
-    width: 40px;
-    height: 20px;
-    background-color: white;
-    border-radius: 30px;
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
-    cursor: pointer; 
-    transition: background-color 0.3s ease;
-}
-
-.toggle-icon {
-    color: goldenrod;
-}
-
-.toggle-ball {
-    width: 18px;
-    height: 18px;
-    background-color: black;
-    position: absolute;
-    right: 1px;
-    border-radius: 50%;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.toggle.active {
-    background-color: black;
-}
-
-.toggle-ball.active {
-    background-color: white;
-    transform: translateX(-20px);
-}
-
 .sidebar{
     width: 50px;
     height: 100%;
@@ -199,18 +128,6 @@ body{
     color: black;
 }
 
-/* Light mode adjustments */
-.light-mode .navbar {
-    background-color: white;
-}
-
-.light-mode .navbar-container {
-    color: black;
-}
-
-.light-mode .toggle-ball {
-    background-color: black;
-}
 
 /* Dropdown Styles */
 .dropdown-menu {
@@ -257,19 +174,6 @@ body{
 
 /*========================Dropdown========================*/
 
-/* Sidebar Styles */
-.sidebar {
-    width: 50px;
-    height: 100%;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
-}
-
 .left-menu-icon{
     color: white;
     font-size: 20px;
@@ -289,18 +193,20 @@ body{
     padding: 50px 0px 0px 0px; /* Top padding to avoid navbar */
     text-align: center;
     margin-right: 0;
+    margin-left: 50px;
+    padding: 80px 20px 20px 20px;
   
 }
 
 /* Movie List Section */
 .movie-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px 0;
     display: flex;
     flex-wrap: wrap; /* This will wrap the items to the next row if there's not enough space */
-    justify-content: space-between; /* Adjusts the space between items */
+    justify-content: center; /* Adjusts the space between items */
 }
 
 /* Movie Item Styling */
@@ -350,19 +256,9 @@ body{
     }
 }
 
-.container{
-    background-color: #151515;
-    min-height: calc(100vh - 50px);
-    width: 100%;        
-    color: white;
-}
 
 .content-container{
     margin-left: 50px;
-}
-
-.container.active{
-    background-color: white;
 }
 
 .navbar-container.active{
@@ -376,12 +272,6 @@ body{
 
 /* Main Content Styles */
 
-.main-content {
-    margin-left: 50px;
-    padding: 80px 20px 20px 20px;
-    text-align: center;
-}
-
 .season-heading {
     font-size: 2.5rem;
     font-weight: bold;
@@ -392,18 +282,15 @@ body{
 }
 
 /* Anime Season List */
-    .anime-season-container {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(400px, 1fr)); /* Increase minimum size to 300px */
-        grid-template-rows: repeat(3,1fr);
-        gap: 15px;
-        padding: 10px;
-        max-width: 1200px;
-        margin: 10px;
-    }
-    
-
-
+.anime-season-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cột có kích thước bằng nhau */
+    gap: 30px; /* Khoảng cách giữa các cột */
+    justify-content: center; /* Căn giữa các cột */
+    width: 90%; /* Đảm bảo độ rộng container không chiếm toàn bộ trang */
+    margin: 20px auto; /* Căn giữa container trong trang */
+    padding: 10px; /* Khoảng cách bên trong của container */
+}
 
 .anime-card {
     background-color: #c02121;
@@ -417,7 +304,7 @@ body{
 }
 
 .anime-card:hover {
-    transform: scale(1.07);
+    transform: scale(1.05);
 }
 
 .anime-card img {
@@ -450,5 +337,3 @@ body{
     font-size: 1rem;
     color: #d8d8d8
 }
-
-
