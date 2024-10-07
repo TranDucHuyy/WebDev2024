@@ -58,10 +58,19 @@ body{
     list-style: none;
 }
 
+.menu-list-item:hover {
+    background-color: rgba(255, 0, 0, 0.877); 
+    border-radius: 5px; 
+}
+
 .light-mode .menu-container a{
     flex: 6;
     text-decoration: none;
     color: black;
+}
+
+.menu-list-item.active{
+    font-weight: bold;
 }
 
 .menu-list-item {
