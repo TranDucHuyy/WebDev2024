@@ -256,3 +256,32 @@ body {
     background-color: red;
     color: white;
 }
+
+/* Watch Button */
+.first-rank .movie-button{
+    background-color: red;
+    color: white;
+}
+
+.first-rank .movie-button:hover{
+    background-color: darkred;
+}
+.movie-button{
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: 100ms all ease-in-out;
+}
+
+.movie-button:hover{
+    background-color: darkred;
+}
+
+.movie-button a{
+    text-decoration: none;
+    color: white;
+}
