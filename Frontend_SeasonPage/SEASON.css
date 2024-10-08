@@ -307,7 +307,7 @@ body{
 
 /* Anime Card */
 .anime-card {
-    background-color: #c02121;
+    background-color: #000000;
     border-radius: 20px;
     box-shadow: 0 20px 160px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -363,6 +363,7 @@ body{
 .movie-button{
     padding: 10px 20px;
     background-color: red;
+    margin: 15px;
     color: white;
     border: none;
     border-radius: 10px;
