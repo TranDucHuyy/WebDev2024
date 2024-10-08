@@ -82,26 +82,6 @@ body {
     border-radius: 5px;
 }
 
-/* Profile Section */
-.profile-container {
-    flex: 2;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.profile-text-container {
-    margin: 0 20px;
-}
-
-.profile-picture {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-
 /* Sidebar */
 .sidebar {
     width: 50px;
@@ -195,12 +175,13 @@ body {
 }
 
 /* Anime List */
+
 .anime-list {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr); /* Chỉnh lại để chia thành 4 cột */
+    grid-gap: 30px; /* Tăng khoảng cách giữa các mục */
     justify-content: center;
-    margin: 20px auto;
+    margin: 40px auto; /* Tăng khoảng cách với các phần khác */
     width: 90%;
 }
 
@@ -209,25 +190,28 @@ body {
 }
 
 .anime-item img {
-    width: 150px;
-    height: 200px;
+    width: 280px;
+    height: 400px;
     object-fit: cover;
     transition: transform 0.3s ease;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 
 .anime-item img:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 15px 5px #C11119;
 }
 
 .anime-item p {
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 20px;
     color: white;
 }
 
 /* Pagination */
 .pagination {
-    display: flex;
+    display: center;
     justify-content: center;
     align-items: center;
     margin-top: 20px;
@@ -255,4 +239,22 @@ body {
 .page-link.active {
     background-color: red;
     color: white;
+}
+
+/* Nút Watch */
+.watch-button {
+    background-color: #C11119;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    border-radius: 20px;
+}
+
+.watch-button:hover {
+    background-color: #ff3b30;
+    transform: scale(1.05);
 }
