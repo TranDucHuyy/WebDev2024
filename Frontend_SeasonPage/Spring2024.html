@@ -65,9 +65,15 @@
    
         <!-- Sidebar -->
         <div class="sidebar">
-            <i class="left-menu-icon fa-solid fa-magnifying-glass"></i>
-            <i class="left-menu-icon fa-solid fa-random"></i>
-            <!-- <i class="left-menu-icon fa-solid fa-bookmark"></i> -->
+            <!-- Icon của thanh tìm kiếm -->
+            <i class="left-menu-icon fa-solid fa-magnifying-glass" onclick="toggleSearchBar()"></i>
+        
+            <div class="search-container" id="searchBar" style="display: none;">
+                <input type="text" id="searchInput" placeholder="Search for a trailer..." onkeydown="handleKeyDown(event)">
+            </div>
+        
+            <!-- Icon của nút random video -->
+            <i class="left-menu-icon fa-solid fa-random" onclick="playRandomTrailer()"></i>
         </div>
  <div class="main-content">
         <!-- Anime Season List -->
@@ -206,6 +212,6 @@
         </div>
     </div>
 
-    <script src="SeasonPage.js"></script>
+    <script src="SEASON.js"></script>
 </body>
 </html>
