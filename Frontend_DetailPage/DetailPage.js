@@ -1,11 +1,11 @@
-const YTPlayerOverlay = document.querySelector(".youtube-player-overlay");
-const YTLink = document.querySelector(".detail-button")
-YTLink.addEventListener('click',()=>{
-    YTPlayerOverlay.classList.add("active");
-})
-YTPlayerOverlay.addEventListener('click',()=>{
-    YTPlayerOverlay.classList.remove("active");
-})
+// const YTPlayerOverlay = document.querySelector(".youtube-player-overlay");
+// const YTLink = document.querySelector(".detail-button")
+// YTLink.addEventListener('click',()=>{
+//     YTPlayerOverlay.classList.add("active");
+// })
+// YTPlayerOverlay.addEventListener('click',()=>{
+//     YTPlayerOverlay.classList.remove("active");
+// })
 
 const arrowsLeft = document.querySelectorAll(".arrow-left");
 const arrowsRight = document.querySelectorAll(".arrow-right");
