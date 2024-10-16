@@ -114,7 +114,7 @@ body {
     align-items: center;
     padding-top: 60px;
 }
-
+/* các nút sidebar */
 .search-container {
     position: absolute;
     top: 51px; 
@@ -135,7 +135,7 @@ body {
     outline: none;
     width: 200px; 
 }
-
+/* end */
 .sidebar.active {
     background-color: white;
 }
